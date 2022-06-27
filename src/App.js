@@ -6,20 +6,23 @@ function App() {
 
   const [list,setList]=useState([]);
   
-
+  
   
   
   useEffect(()=>{
 
     Axios.get('https://data.covid19india.org/data.json').then((response)=>{
       setList(response.data.statewise);
-      console.log(list[0]);
+      
      // console.log(response.data.statewise);
 
+    }).catch((error)=>{
+      console.log("Error");
     })
 
   },[])
 
+  
   
 
 
@@ -39,17 +42,38 @@ function App() {
         <div className="item" id="one">
           <div><h5>Active</h5></div>
         
-          <div className="num">{list[0].active}</div>
+          <div className="num">{
+           list.map((obj)=>{
+            if(obj.state ==="Total"){
+              return obj.active
+            }
+          })
+          
+          }</div>
         </div>
         <div className="item" id="two">
           <div><h5>Confirmed</h5></div>
          
-          <div className="num">{list[0].confirmed}</div>
+          <div className="num">{
+           list.map((obj)=>{
+            if(obj.state ==="Total"){
+              return obj.confirmed
+            }
+          })
+          
+          }</div>
         </div>
         <div className="item" id="three">
           <div><h5>Deaths</h5></div>
          
-          <div className="num">{list[0].deaths}</div>
+          <div className="num">{
+           list.map((obj)=>{
+            if(obj.state ==="Total"){
+              return obj.deaths
+            }
+          })
+          
+          }</div>
         </div>
       </div>
       <br></br>
