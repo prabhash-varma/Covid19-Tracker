@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.header{
+  background-color: black;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  padding-top:20px;
+}
+
+
+.total{
+  height: 120px;
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-bottom:40px;
+  margin-top:40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+}
+
+img{
+  height: 125px;
+  width:190px;
+}
+
+.item{
+  /* border: 1px solid black; */
+  width: 180px;
+ 
+}
+
+
+
+.table{
+  margin-top:30px;
+}
+
+.head{
+  background-color:black;
+  color:white;
+  
+}
+
+tr{
+  height:50px;
+  box-shadow: 0px 0px 1px;
+}
+
+tr:hover{
+  cursor:pointer;
+  box-shadow: 1px 1px 12px;
+}
+
+
+
+td{
+  text-align: center;
+}
+
+.num{
+  
+  font-size: 35px;
+}
+
+
+#one,#two,#three{
+  margin-top:10px;
+  box-shadow: 2px 2px 6px;
+  border-radius:10px;
+}
+
+
+#one:hover{
+  background-color: black;
+  color:white;
+  box-shadow: 4px 4px 12px;
+}
+#two:hover{
+  background-color: black;
+  color:white;
+  box-shadow: 0 3px 6px;
+}
+
+#three:hover{
+  background-color: black;
+  color:white;
+  box-shadow: 0 3px 6px;
+}
+
